@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function Map() {
-  
+function Conditions() {
+  //let listItems = [];
   let listItems = [
     "This is item 1",
     "This is item 2",
@@ -16,7 +16,8 @@ function Map() {
 
   return (
     <React.Fragment>
-      <h1>This is an example of how Map is used in react</h1>
+      <h1>This is an example of how conditions are used in react</h1>
+      {listItems.length === 0 ? <h1>Opps! No conditions satisfied !</h1> : null}
       <ul className="list-group">
         {listItems.map((item) => (
           <li key={item} className="list-group-item">
@@ -28,4 +29,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default Conditions;
